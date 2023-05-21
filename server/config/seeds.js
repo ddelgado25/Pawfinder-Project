@@ -97,7 +97,7 @@ db.once('open', async () => {
       category: categories[1]._id,
       sex: 'female',
       age: '12 months',
-      image: 'Ruby.jpg',
+      image: 'Ruby.png',
       description: 'Ruby is a loving and playful Golden Retriever with a golden coat that shimmers. She has a talent for finding hidden toys and treasures around the house, making playtime an exciting adventure for everyone! Fun fact: Ruby cannot resist singing along whenever she hears her favorite tunes, often surprising her family with her adorable and melodious howls of joy!',
       quantity: 1,
       price: 1199.99,
