@@ -1,17 +1,17 @@
 import React from 'react';
-​
+
 function CategoryMenu({ handleCategorySelect }) {
   const handleClick = (category) => {
     handleCategorySelect(category);
   };
-​
+
   const categories = [
     { name: 'Golden Retriever' },
     { name: 'French Bulldog' },
     { name: 'Maltipoos' },
     { name: 'English Shepherd' },
   ];
-​
+
   return (
     <div>
       <h2>Choose a Breed:</h2>
@@ -23,5 +23,5 @@ function CategoryMenu({ handleCategorySelect }) {
     </div>
   );
 }
-​
+
 export default CategoryMenu;
