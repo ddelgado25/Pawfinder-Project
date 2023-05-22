@@ -14,6 +14,7 @@ import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
 
+
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
@@ -25,12 +26,9 @@ function Detail() {
   const { products, cart } = state;
 
   useEffect(() => {
-    // already in global store
     if (products.length) {
       setCurrentProduct(products.find((product) => product._id === id));
-    }
-    // retrieved from server
-    else if (data) {
+    } else if (data) {
       dispatch({
         type: UPDATE_PRODUCTS,
         products: data.products,
@@ -39,9 +37,7 @@ function Detail() {
       data.products.forEach((product) => {
         idbPromise('products', 'put', product);
       });
-    }
-    // get cache from idb
-    else if (!loading) {
+    } else if (!loading) {
       idbPromise('products', 'get').then((indexedProducts) => {
         dispatch({
           type: UPDATE_PRODUCTS,
@@ -81,33 +77,89 @@ function Detail() {
     idbPromise('cart', 'delete', { ...currentProduct });
   };
 
+  const handleProductClick = (productId) => {
+    // Handle the click event by navigating to the product detail page
+    console.log('Clicked on product with ID:', productId);
+  };
+
+  const otherProducts = products.filter(
+    (product) => product.name === currentProduct.name && product._id !== id
+  );
+
   return (
     <>
       {currentProduct && cart ? (
-        <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
+        <div className="container mx-auto my-8">
+          <Link to="/" className="text-blue-500 hover:text-blue-700 mb-4 block">
+            ← Back to Products
+          </Link>
 
-          <h2>{currentProduct.name}</h2>
+          <div className="flex flex-col items-center mb-8">
+            <img
+              src={`/images/${currentProduct.image}`}
+              alt={currentProduct.name}
+              className="w-full max-w-2xl mx-auto"
+            />
+          </div>
 
-          <p>{currentProduct.description}</p>
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">{currentProduct.name}</h2>
 
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
-            <button onClick={addToCart}>Add to Cart</button>
-            <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-            </button>
-          </p>
+            <p className="text-gray-700 mb-4">{currentProduct.description}</p>
 
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
-        </div>
-      ) : null}
+            <p className="flex items-center mb-4">
+              <strong className="mr-2">Price:</strong>
+              <span className="text-green-600">${currentProduct.price}</span>
+              <button
+                className="ml-4 px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-700"
+                onClick={addToCart}
+              >
+                Add to Cart
+              </button>
+              <button
+                className="ml-2 px-4 py-2 rounded bg-red-500 text-white hover:bg-red-700"
+                disabled={!cart.find((p) => p._id === currentProduct._id)}
+                onClick={removeFromCart}
+              >
+                Remove from Cart
+              </button>
+            </p>
+          </div>
+
+          {otherProducts.length > 0 && (
+            <div className="container mx-auto my-8 lg:max-w-5xl">
+              <h2 className="text-2xl font-bold mb-4">Other Available {currentProduct.name}s</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {otherProducts.map((product) => (
+                  <div
+                    key={product._id}
+                    className="bg-white rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform duration-300 relative"
+                  >
+                    <Link
+                      to={`/products/${product._id}`}
+                      className="block transition-opacity duration-300"
+                    >
+                      <img
+                        src={`/images/${product.image}`}
+                        alt={product.name}
+                        className="w-full h-40 object-cover transition-opacity duration-300"
+                      />
+                      <div className="p-4">
+                        <h4 className="text-lg font-semibold">{product.name}</h4>
+                        <p>
+                          <strong>Price:</strong> ${product.price}
+                        </p>
+                      </div>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+        </div >
+      ) : null
+      }
       {loading ? <img src={spinner} alt="loading" /> : null}
       <Cart />
     </>
