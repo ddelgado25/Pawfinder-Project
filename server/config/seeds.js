@@ -7,7 +7,7 @@ db.once('open', async () => {
     { name: 'French Bulldog' },
     { name: 'Maltipoos' },
     { name: 'English Shepherd' },
-    { name: 'pending mike' }
+    { name: 'Pitbull' }
   ]);
   console.log('categories seeded');
   await Product.deleteMany();
@@ -117,7 +117,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       sex: 'male',
       age: '4 months',
-      image: 'rocky_fb.jpeg',
+      image: 'rocky_fb.jpg',
       description: 'Rocky is a playful and energetic French Bulldog. He loves cuddling and enjoys going for long walks.',
       quantity: 1,
       price: 1499.99,
@@ -127,7 +127,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       sex: 'female',
       age: '3 months',
-      image: 'luna_fb.jpeg',
+      image: 'luna_fb.jpg',
       description: 'Luna is a sweet and gentle French Bulldog. She gets along well with children and other pets.',
       quantity: 1,
       price: 1799.99,
@@ -137,7 +137,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       sex: 'male',
       age: '7 months',
-      image: 'max_fb.jpeg',
+      image: 'max_fb.jpg',
       description: 'Max is a friendly and outgoing French Bulldog. He loves playing fetch and going on adventures.',
       quantity: 1,
       price: 1599.99,
@@ -147,7 +147,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       sex: 'female',
       age: '10 months',
-      image: 'bella_fb.jpeg',
+      image: 'bella_fb.jpg',
       description: 'Bella is a loyal and affectionate French Bulldog. She enjoys spending time with her family and relaxing in the sun.',
       quantity: 1,
       price: 1699.99,
@@ -157,7 +157,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       sex: 'male',
       age: '2.5 years',
-      image: 'oscar_fb.jpeg',
+      image: 'oscar_fb.jpg',
       description: 'Oscar is an intelligent and playful French Bulldog. He learns quickly and enjoys learning new tricks.',
       quantity: 1,
       price: 1899.99,
@@ -211,7 +211,57 @@ db.once('open', async () => {
       description: 'Gunther is a charismatic male Maltipoo puppy with a luxurious, wavy coat that is perfect for snuggling. Gunther loves playing dress-up, and his fashion sense is off the charts. You will have a blast dressing him up in adorable outfits and capturing the most Instagram-worthy moments!',
       quantity: 1,
       price: 2999.99,
-    }
+    },
+    {
+      name: 'Pitbull',
+      category: categories[0]._id,
+      sex: 'male',
+      age: '6 months',
+      description: 'Say hello to Stella! She is a very friendly girl who will likely fit well in most homes, so long as she can get plenty of daily exercise, playtime, love and attention! She is super smart and food-motivated, and will be a total blast to do some all-positive, treat-based training with. She may even pair well with another social and easygoing dog!',
+      image: 'stella-2.jpg',
+      price: 500.00,
+      },
+      
+      {
+      name: 'Pitbull',
+      category: categories[0]._id,
+      sex: 'male',
+      age: '3 months',
+      description: 'Meet Milo, an affectionate male Pitbull searching for his forever home. With a handsome coat and captivating eyes, Milo is a gentle pup who adores cuddles and belly rubs. This intelligent pup thrives on companionship, making him the perfect addition to an active and loving family ready for adventure.',
+      image: 'milo.jpg',
+      price: 500.00,
+      },
+      
+      {
+      name: 'Pitbull',
+      category: categories[0]._id,
+      sex: 'male',
+      age: '3 months',
+      description: 'Introducing Otis, a lovable and playful male Pitbull puppy eagerly awaiting his forever family. With a charming light brown and white coat that perfectly complements his striking blue eyes, Otis is simply irresistible. Despite his small size, Otis possesses a big heart full of love and a playful spirit that will bring endless joy to any home. If you are seeking a delightful and adorable companion who will shower you with affection and brighten your days with his boundless energy, look no further than Otis.',
+      image: 'otis.jpg',
+      price: 750.00,
+      },
+      
+      {
+      name: 'Pitbull',
+      category: categories[0]._id,
+      sex: 'female',
+      age: '6 years',
+      description: 'Meet Gracie, a beautiful and mature 6-year-old female Pitbull seeking her forever family. With her stunning grayish brown coat, Gracie exudes elegance and grace wherever she goes. This sweet and gentle soul is the epitome of loyalty, always ready to shower her humans with unconditional love and affection. If you are looking for a devoted companion who will bring warmth and serenity to your home, Gracie is the perfect match.',
+      image: 'gracie.jpg',
+      price: 450.00
+      },
+      {
+        name: 'Pitbull',
+        category: categories[0]._id,
+        sex: 'female',
+        age: '1.5 years',
+        description: 'Meet Lola, a delightful and affectionate tan Pitbull with a heart full of love just waiting to find her forever family. This sweet-natured girl is hoping to capture your heart and become the perfect addition to your home. If you are searching for a devoted and loyal companion who will brighten your days with endless love and loyalty, Lola is eagerly waiting to meet you. Bring this tan beauty into your life, and you will experience the boundless joy that comes from opening your heart to a special canine friend.',
+        image: 'lola.jpg',
+        price: 300.00,
+        },
+        
+      
   ]);
   console.log('products seeded');
   await User.deleteMany();

@@ -10,6 +10,7 @@ function CategoryMenu({ handleCategorySelect }) {
     { name: 'French Bulldog' },
     { name: 'Maltipoos' },
     { name: 'English Shepherd' },
+    { name: 'Pitbull' },
   ];
 
   return (

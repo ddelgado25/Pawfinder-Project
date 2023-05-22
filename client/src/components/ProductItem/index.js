@@ -4,6 +4,7 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import { BsCart4 } from 'react-icons/bs';
 
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
@@ -40,32 +41,35 @@ function ProductItem(item) {
   }
 
   return (
-    <div className="card px-1 py-1 bg-white rounded-xl shadow-md overflow-hidden">
-  <Link to={`/products/${_id}`}>
-    <div className="h-48">
-      <img
-        alt={name}
-        src={`/images/${image}`}
-        className="w-full h-full object-cover rounded-xl"
-      />
+    <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+      <div className="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl p-2">
+        <Link to={`/products/${_id}`} className="block">
+          <div className="h-48">
+            <img
+              alt={name}
+              src={`/images/${image}`}
+              className="w-full h-full object-cover rounded-xl"
+            />
+          </div>
+          <p className="mt-2 text-gray-800 font-semibold">{name}</p>
+        </Link>
+        <div className="flex justify-between items-center mt-2">
+          <div className="text-sm text-gray-600">
+            {quantity} {quantity === 1 ? 'item' : 'items'} in stock
+          </div>
+          <span className="text-lg font-semibold text-gray-800">${price}</span>
+        </div>
+        <button
+          onClick={addToCart}
+          className="block w-full mt-4 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 transition-colors duration-300 ease-in-out flex items-center justify-center"
+        >
+          <span className="mr-2">
+            <BsCart4 size={20} />
+          </span>
+          Add to cart
+        </button>
+      </div>
     </div>
-    <p className="mt-2 text-gray-800 font-semibold">{name}</p>
-  </Link>
-  <div className="flex justify-between items-center mt-2">
-    <div className="text-sm text-gray-600">
-      {quantity} {pluralize("item", quantity)} in stock
-    </div>
-    <span className="text-lg font-semibold text-gray-800">${price}</span>
-  </div>
-  <button
-    onClick={addToCart}
-    className="block w-full mt-4 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600"
-  >
-    Add to cart
-  </button>
-</div>
-
-
   );
 }
 
