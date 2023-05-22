@@ -8,8 +8,8 @@ function CategoryMenu({ handleCategorySelect }) {
   const categories = [
     { name: 'Golden Retriever' },
     { name: 'French Bulldog' },
-    { name: 'Maltipoos' },
-    { name: 'English Shepherd' },
+    { name: 'Yorkshire Terrier' },
+    { name: 'Beagle' },
     { name: 'Pitbull' },
   ];
 
