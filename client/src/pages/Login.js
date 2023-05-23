@@ -3,8 +3,8 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
-import helloDog from '/Users/Alisson/Bootcamp/Pawfinder-Project/client/src/images/hello.jpg';
-import '/Users/Alisson/Bootcamp/Pawfinder-Project/client/src/loginstyle.css'; // Import the updated CSS file
+import helloDog from '../images/hello.jpg';
+import '../loginstyle.css'; // Import the updated CSS file
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
