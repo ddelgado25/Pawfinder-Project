@@ -49,3 +49,17 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const SEND_MESSAGE = gql`
+  mutation sendMessage(
+    $email: String!
+    $message: String!
+  ) {
+    sendMessage(
+      email: $email
+      message: $message
+    ) {
+      message
+    }
+  }
+`;
