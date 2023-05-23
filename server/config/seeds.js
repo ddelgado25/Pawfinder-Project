@@ -13,6 +13,8 @@ db.once('open', async () => {
   await Product.deleteMany();
   const products = await Product.insertMany([
     {
+
+      name2: 'Bella',
       name: 'Beagle',
       category: categories[4]._id,
       sex: 'female',
@@ -23,6 +25,7 @@ db.once('open', async () => {
       price: 1299.99,
     },
     {
+      name2: 'Max',
       name: 'Beagle',
       category: categories[4]._id,
       sex: 'male',
@@ -33,6 +36,7 @@ db.once('open', async () => {
       price: 1399.99,
     },
     {
+      name2: 'Lucy',
       name: 'Beagle',
       category: categories[4]._id,
       sex: 'female',
@@ -43,6 +47,7 @@ db.once('open', async () => {
       price: 1399.99,
     },
     {
+      name2: 'Cooper',
       name: 'Beagle',
       category: categories[4]._id,
       sex: 'male',
@@ -53,6 +58,7 @@ db.once('open', async () => {
       price: 1499.99,
     },
     {
+      name2: 'Daisy',
       name: "Beagle",
       category: categories[4]._id,
       sex: 'female',
@@ -64,6 +70,7 @@ db.once('open', async () => {
     },
     {
       name: 'Golden Retriever',
+      name2: 'Cooper',
       category: categories[1]._id,
       sex: 'male',
       age: '6 months',
@@ -74,6 +81,7 @@ db.once('open', async () => {
     },
     {
       name: 'Golden Retriever',
+      name2: 'Bentley',
       category: categories[1]._id,
       sex: 'male',
       age: '3 months',
@@ -84,6 +92,7 @@ db.once('open', async () => {
     },
     {
       name: 'Golden Retriever',
+      name2: 'Max',
       category: categories[1]._id,
       sex: 'male',
       age: '8 months',
@@ -94,6 +103,7 @@ db.once('open', async () => {
     },
     {
       name: 'Golden Retriever',
+      name2: 'Ruby',
       category: categories[1]._id,
       sex: 'female',
       age: '12 months',
@@ -104,6 +114,7 @@ db.once('open', async () => {
     },
     {
       name: 'Golden Retriever',
+      name2: 'Kodi',
       category: categories[1]._id,
       sex: 'male',
       age: '10 months',
@@ -114,6 +125,7 @@ db.once('open', async () => {
     },
     {
       name: 'French Bulldog',
+      name2: 'Rocky',
       category: categories[2]._id,
       sex: 'male',
       age: '4 months',
@@ -124,6 +136,7 @@ db.once('open', async () => {
     },
     {
       name: 'French Bulldog',
+      name2: 'Luna',
       category: categories[2]._id,
       sex: 'female',
       age: '3 months',
@@ -134,6 +147,7 @@ db.once('open', async () => {
     },
     {
       name: 'French Bulldog',
+      name2: 'Max',
       category: categories[2]._id,
       sex: 'male',
       age: '7 months',
@@ -144,6 +158,7 @@ db.once('open', async () => {
     },
     {
       name: 'French Bulldog',
+      name2: 'Bella',
       category: categories[2]._id,
       sex: 'female',
       age: '10 months',
@@ -154,6 +169,7 @@ db.once('open', async () => {
     },
     {
       name: 'French Bulldog',
+      name2: 'Oscar',
       category: categories[2]._id,
       sex: 'male',
       age: '2.5 years',
@@ -163,6 +179,7 @@ db.once('open', async () => {
       price: 1899.99,
     },
     {
+      name2: 'Stella',
       name: 'Yorkshire Terrier',
       category: categories[3]._id,
       sex: 'female',
@@ -173,6 +190,7 @@ db.once('open', async () => {
       price: 2999.99,
     },
     {
+      name2: 'Sunshine',
       name: 'Yorkshire Terrier',
       category: categories[3]._id,
       sex: 'female',
@@ -183,6 +201,7 @@ db.once('open', async () => {
       price: 2899.99,
     },
     {
+      name2: 'Princess',
       name: 'Yorkshire Terrier',
       category: categories[3]._id,
       sex: 'female',
@@ -193,6 +212,7 @@ db.once('open', async () => {
       price: 2599.99,
     },
     {
+      name2: 'Chonks',
       name: 'Yorkshire Terrier',
       category: categories[3]._id,
       sex: 'male',
@@ -203,6 +223,7 @@ db.once('open', async () => {
       price: 2799.99,
     },
     {
+      name2: 'Gunther',
       name: 'Yorkshire Terrier',
       category: categories[3]._id,
       sex: 'male',
@@ -214,6 +235,7 @@ db.once('open', async () => {
     },
     {
       name: 'Pitbull',
+      name2: 'Stella',
       category: categories[0]._id,
       sex: 'male',
       age: '6 months',
@@ -224,6 +246,7 @@ db.once('open', async () => {
       
       {
       name: 'Pitbull',
+      name2: 'Milo',
       category: categories[0]._id,
       sex: 'male',
       age: '3 months',
@@ -234,6 +257,7 @@ db.once('open', async () => {
       
       {
       name: 'Pitbull',
+      name2: 'Otis',
       category: categories[0]._id,
       sex: 'male',
       age: '3 months',
@@ -244,6 +268,7 @@ db.once('open', async () => {
       
       {
       name: 'Pitbull',
+      name2: 'Gracie',
       category: categories[0]._id,
       sex: 'female',
       age: '6 years',
@@ -253,6 +278,7 @@ db.once('open', async () => {
       },
       {
         name: 'Pitbull',
+        name2: 'Lola',
         category: categories[0]._id,
         sex: 'female',
         age: '1.5 years',

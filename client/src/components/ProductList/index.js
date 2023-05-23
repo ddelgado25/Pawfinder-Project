@@ -29,9 +29,10 @@ function ProductList({ searchTerm }) {
           product.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-
+    console.log('Line 32',products)
     setFilteredProducts(filtered);
   }, [currentCategory, products, searchTerm]);
+
 
   useEffect(() => {
     if (searchTerm === "") {
@@ -62,7 +63,9 @@ function ProductList({ searchTerm }) {
 
   return (
     <div className="my-2">
-      <h2>Our Products:</h2>
+      {searchTerm !== "" && filteredProducts.length > 0 && (
+        <h2>Our Friends:</h2>
+      )}
       {searchTerm !== "" && filteredProducts.length ? (
         <div className="flex-row">
           {filteredProducts.map((product) => (
@@ -70,14 +73,16 @@ function ProductList({ searchTerm }) {
               key={product._id}
               _id={product._id}
               image={product.image}
-              name={product.name}
+              name={product.name2}
+              breed={product.name}
               price={product.price}
+              age={product.age}
               quantity={product.quantity}
             />
           ))}
         </div>
       ) : searchTerm !== "" ? (
-        <h3>No products found.</h3>
+        <h3>No Dogs found.</h3>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
     </div>

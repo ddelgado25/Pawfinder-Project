@@ -9,6 +9,8 @@ const typeDefs = gql`
   type Product {
     _id: ID
     name: String
+    name2: String
+    age: String
     description: String
     image: String
     quantity: Int
@@ -39,6 +41,13 @@ const typeDefs = gql`
     user: User
   }
 
+  type Message {
+    _id: ID
+    name: String
+    email: String
+    message: String
+  }
+
   type Query {
     categories: [Category]
     products(category: ID, name: String): [Product]
@@ -54,6 +63,7 @@ const typeDefs = gql`
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
+    sendMessage(name: String!, email: String!, message: String!): Message
   }
 `;
 

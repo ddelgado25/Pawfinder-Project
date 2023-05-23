@@ -25,6 +25,7 @@ function Nav() {
             </Link>
           </li>
           <li className="mx-1">
+
             <Link to="/aboutus">ABOUT US</Link>
           </li>
           <li className="mx-2">
@@ -34,6 +35,7 @@ function Nav() {
             >
               LOGOUT
             </button>
+
           </li>
         </ul>
       );
@@ -56,6 +58,11 @@ function Nav() {
               style={{ backgroundColor: '#C8C8C8' }}
             >
               Login
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/aboutus">
+              About Us
             </Link>
           </li>
         </ul>
