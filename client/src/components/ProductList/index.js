@@ -63,7 +63,9 @@ function ProductList({ searchTerm }) {
 
   return (
     <div className="my-2">
-      <h2>Our Friends:</h2>
+      {searchTerm !== "" && filteredProducts.length > 0 && (
+        <h2>Our Friends:</h2>
+      )}
       {searchTerm !== "" && filteredProducts.length ? (
         <div className="flex-row">
           {filteredProducts.map((product) => (
