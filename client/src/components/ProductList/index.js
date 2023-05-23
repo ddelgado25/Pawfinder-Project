@@ -29,9 +29,10 @@ function ProductList({ searchTerm }) {
           product.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-
+    console.log('Line 32',products)
     setFilteredProducts(filtered);
   }, [currentCategory, products, searchTerm]);
+
 
   useEffect(() => {
     if (searchTerm === "") {
@@ -70,8 +71,10 @@ function ProductList({ searchTerm }) {
               key={product._id}
               _id={product._id}
               image={product.image}
-              name={product.name}
+              name={product.name2}
+              breed={product.name}
               price={product.price}
+              age={product.age}
               quantity={product.quantity}
             />
           ))}

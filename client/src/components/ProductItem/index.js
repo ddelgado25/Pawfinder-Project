@@ -10,8 +10,10 @@ function ProductItem(item) {
   const {
     image,
     name,
+    breed,
     _id,
     price,
+    age,
     quantity
   } = item;
   const { cart } = state
@@ -48,10 +50,13 @@ function ProductItem(item) {
           </div>
           <p className="mt-2 text-gray-800 font-semibold">{name}</p>
         </Link>
+        <div className="mt-0">
+          <p className="text-gray-600"> {breed}</p>
+        </div>
         <div className="flex justify-between items-center mt-2">
           <div className="text-sm text-gray-600">
-            {quantity} {quantity === 1 ? 'item' : 'items'} in stock
-          </div>
+            <p>{age}</p>
+            </div>
           <span className="text-lg font-semibold text-gray-800">${price}</span>
         </div>
         <button
