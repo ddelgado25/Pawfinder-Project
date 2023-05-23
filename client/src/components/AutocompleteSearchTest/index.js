@@ -1,7 +1,7 @@
 import TextInput from 'react-autocomplete-input';
 import { useState } from 'react';
 function Autocomplete() {
-    const [options, setOptions] = useState(["Golden Retriever", "French Bulldog", "Yorkshire Terrier", "Beagle", "Pitbull"])
+    const [options, setOptions] = useState(["English Shepherd", "Pitbull"])
 
     function handleRequestOptions(part) {
         console.log(part);          // -> "ap", which is part after trigger "@"
