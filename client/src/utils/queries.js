@@ -5,6 +5,8 @@ export const QUERY_PRODUCTS = gql`
     products(category: $category) {
       _id
       name
+      name2
+      age
       description
       price
       quantity
@@ -29,6 +31,8 @@ export const QUERY_ALL_PRODUCTS = gql`
     products {
       _id
       name
+      name2
+      age
       description
       price
       quantity
