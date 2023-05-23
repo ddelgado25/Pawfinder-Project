@@ -103,7 +103,8 @@ function Detail() {
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">{currentProduct.name2}</h2>
+            <h2 className="text-3xl font-bold mb-0">{currentProduct.name2}</h2>
+            <h3 className='text-sm text-gray-600 mb-4'>{currentProduct.age} old</h3>
 
             <p className="text-gray-700 mb-4">{currentProduct.description}</p>
 
