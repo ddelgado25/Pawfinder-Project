@@ -5,10 +5,8 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 import { BsCart4 } from 'react-icons/bs';
-
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
-
   const {
     image,
     name,
@@ -18,9 +16,7 @@ function ProductItem(item) {
     age,
     quantity
   } = item;
-
   const { cart } = state
-
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)
     if (itemInCart) {
@@ -41,7 +37,6 @@ function ProductItem(item) {
       idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
     }
   }
-
   return (
     <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
       <div className="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl p-2">
@@ -77,5 +72,4 @@ function ProductItem(item) {
     </div>
   );
 }
-
 export default ProductItem;
