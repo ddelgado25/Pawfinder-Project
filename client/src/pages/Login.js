@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 import helloDog from '../images/hello.jpg';
-import '../loginstyle.css'; // Import the updated CSS file
-
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -33,36 +30,34 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1">
-      <Link to="/signup" className="go-to-signup">
-        ← Go to Signup
-      </Link>
-
-      <div className="login-container">
-        <div className="form-container">
-          <h2 className="login-title">Login</h2>
+    <div className="flex justify-center items-center h-screen">
+      <div className="login-container border rounded-lg shadow-lg max-w-75">
+        <div className="form-container p-4">
+          <h2 className="text-2xl font-bold mb-4">Login</h2>
           <form onSubmit={handleFormSubmit}>
-            <div className="flex-row space-between">
-              <label htmlFor="email">Email address:</label>
+            <div className="flex flex-col mb-4">
+              <label htmlFor="email" className="mb-2">
+                Email address:
+              </label>
               <input
                 placeholder="youremail@test.com"
                 name="email"
                 type="email"
                 id="email"
-                className="input-field"
-                style={{ width: '100%' }} // Set the width of the input field
+                className="input-field py-2 px-4 border rounded"
                 onChange={handleChange}
               />
             </div>
-            <div className="flex-row space-between my-2">
-              <label htmlFor="pwd">Password:</label>
+            <div className="flex flex-col mb-4">
+              <label htmlFor="pwd" className="mb-2">
+                Password:
+              </label>
               <input
                 placeholder="******"
                 name="password"
                 type="password"
                 id="pwd"
-                className="input-field"
-                style={{ width: '100%' }} // Set the width of the input field
+                className="input-field py-2 px-4 border rounded"
                 onChange={handleChange}
               />
             </div>
@@ -71,8 +66,8 @@ function Login(props) {
                 <p className="error-text">The provided credentials are incorrect</p>
               </div>
             )}
-            <div className="flex-row flex-end">
-              <button type="submit" className="submit-button">
+            <div className="flex justify-end">
+              <button type="submit" className="submit-button py-2 px-4 bg-blue-500 text-white rounded">
                 Submit
               </button>
             </div>
