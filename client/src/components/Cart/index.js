@@ -82,7 +82,7 @@ const Cart = () => {
       <div className="close" onClick={toggleCart}>
         [close]
       </div>
-      <h2>Shopping Cart</h2>
+      <h2 className="bg-blue-500 py-2 text-center text-white rounded-lg shadow-md">Shopping Cart</h2>
       {state.cart.length ? (
         <div>
           {state.cart.map((item) => (
@@ -101,12 +101,9 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <h3>
-          <span role="img" aria-label="shocked">
-            😱
-          </span>
+        <p className="text-center">
           You haven't added anything to your cart yet!
-        </h3>
+        </p>
       )}
     </div>
   );
