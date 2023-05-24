@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 import welcomeDog from '../images/welcome-back.jpg';
-import '../loginstyle.css'; // Import the updated CSS file
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({
+    email: '',
+    password: '',
+    firstName: '',
+    lastName: ''
+  });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
@@ -26,73 +29,93 @@ function Signup(props) {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormState({
-      ...formState,
+    setFormState((prevState) => ({
+      ...prevState,
       [name]: value,
-    });
+    }));
   };
 
   return (
-<div className="container my-1">
-  <div className="go-to-login">
-    <Link to="/login">← Go to Login</Link>
-  </div>
+    <div className="flex justify-center items-center h-screen">
+      <div className="w-2/5">
+        <img
+          src={welcomeDog}
+          alt="jackrussel"
+          className="max-w-full h-auto transform scale-200"
+        />
+      </div>
 
-  <div className="flex-row">
-    <div className="welcome-dog">
-      <img src={welcomeDog} alt="jackrussel" />
-    </div>
+      <div className="w-2/5">
 
-    <div className="signup-container">
-      <h2>Signup</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            placeholder="First"
-            name="firstName"
-            type="firstName"
-            id="firstName"
-            onChange={handleChange}
-          />
+        <div className="bg-white rounded-lg shadow-lg">
+          <div className="p-8">
+            <h2 className="text-2xl font-bold mb-4">Sign Up For an Account</h2>
+            <form onSubmit={handleFormSubmit}>
+              <div className="mb-4">
+                <label htmlFor="firstName" className="block mb-2">
+                  First Name:
+                </label>
+                <input
+                  placeholder="First"
+                  name="firstName"
+                  type="text"
+                  id="firstName"
+                  className="w-full px-3 py-2 border rounded-md"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="lastName" className="block mb-2">
+                  Last Name:
+                </label>
+                <input
+                  placeholder="Last"
+                  name="lastName"
+                  type="text"
+                  id="lastName"
+                  className="w-full px-3 py-2 border rounded-md"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="email" className="block mb-2">
+                  Email:
+                </label>
+                <input
+                  placeholder="youremail@test.com"
+                  name="email"
+                  type="email"
+                  id="email"
+                  className="w-full px-3 py-2 border rounded-md"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="password" className="block mb-2">
+                  Password:
+                </label>
+                <input
+                  placeholder="******"
+                  name="password"
+                  type="password"
+                  id="password"
+                  className="w-full px-3 py-2 border rounded-md"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="flex justify-end">
+                <button
+                  type="submit"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            placeholder="Last"
-            name="lastName"
-            type="lastName"
-            id="lastName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+      </div>
     </div>
-  </div>
-  </div>
   );
 }
 
