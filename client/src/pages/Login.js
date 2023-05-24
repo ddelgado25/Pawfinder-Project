@@ -67,7 +67,7 @@ function Login(props) {
               </div>
             )}
             <div className="flex justify-end">
-              <button type="submit" className="submit-button py-2 px-4 bg-blue-500 text-white rounded">
+              <button type="submit" className="submit-button py-2 px-4 bg-custom-green text-white rounded">
                 Submit
               </button>
             </div>

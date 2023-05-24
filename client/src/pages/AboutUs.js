@@ -92,7 +92,7 @@ function AboutUs(props) {
           </div>
         ) : null}
         <div className="flex flex-row-reverse">
-          <button type="submit" className={`px-4 py-2 bg-blue-500 text-white rounded-md ${transitionClasses}`}>Submit</button>
+          <button type="submit" className={`px-4 py-2 bg-custom-green text-white rounded-md ${transitionClasses}`}>Submit</button>
         </div>
       </form>
     </div>
