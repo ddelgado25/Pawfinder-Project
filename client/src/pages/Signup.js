@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
-import welcomeDog from '../images/welcome-back.jpg';
+import welcomeDog from '../images/welcome-back.png';
 
 function Signup(props) {
   const [formState, setFormState] = useState({

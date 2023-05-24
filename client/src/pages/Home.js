@@ -34,7 +34,7 @@ const Home = () => {
             placeholder="Search breeds..."
             className="border-4 border-custom-green bg-transparent rounded px-4 py-2 mb-4 md:mb-1 w-full"
           />
-          <CategoryMenu handleCategorySelect={handleCategorySelect} className="mt-4 " />
+          <CategoryMenu handleCategorySelect={handleCategorySelect} className="mt-4  " />
           <p className="text-custom-blue text-8xl font-bold mb-2 mt-6">YOUR NEW</p>
           <p className="text-custom-green text-8xl font-bold mb-2">PAW MATE </p>
           <p className="text-custom-green text-8xl font-bold"> AWAITS...</p>

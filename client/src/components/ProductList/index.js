@@ -62,7 +62,7 @@ function ProductList({ searchTerm }) {
   }, [data, loading, dispatch]);
 
   return (
-    <div className="my-2">
+    <div className="my-2 text-2xl ">
       {searchTerm !== "" && filteredProducts.length > 0 && (
         <h2>Our Friends:</h2>
       )}

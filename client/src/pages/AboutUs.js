@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { SEND_MESSAGE } from '../utils/mutations';
-import upsidedownDog from '../images/upsidedowndogo.jpeg';
+import upsidedownDog from '../images/upsidedowndogo.png';
 import 'tailwindcss/tailwind.css'; // Import Tailwind CSS
 
 // Add custom transition classes
