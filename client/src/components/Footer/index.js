@@ -25,7 +25,7 @@ function Footer() {
           </li>
           <li className="mx-2">
             <Link
-              to="/contact"
+              to="/aboutus"
               className="text-gray-200 hover:text-gray-100 transition-colors duration-300"
             >
               Contact
