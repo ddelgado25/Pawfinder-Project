@@ -233,7 +233,7 @@ input:focus {
   transform: scale(1.1);
 }
 
-button.block {
+/* button.block {
   transition-property: background-color, transform;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
@@ -242,7 +242,7 @@ button.block {
 button.block:hover {
   background-color: #gray-200;
   transform: scale(1.05);
-}
+} */
 
 
 /* dropdown */
