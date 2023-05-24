@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# PawFinder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a single-page web application designed to facilitate dog adoptions. It provides a platform for users to search for dogs available for adoption, create profiles, and finalize the adoption process. The application is built using the MERN stack (MongoDB, Express.js, React, and Node.js) and incorporates GraphQL for efficient data handling.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+The Dog Adoption Web Application offers the following features:
 
-### `npm start`
+1. **Search Functionality**: Users can search for dogs based on their breed or name using the search bar.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Cart**: Users can add dogs they are interested in adopting to the cart, allowing them to finalize the adoption process.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **User Profiles**: Users can create profiles, log in, and sign up to gain access to additional features and personalize their adoption experience.
 
-### `npm test`
+4. **Front-end with React**: The application's front-end is built using React, providing a responsive and interactive user interface.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Back-end with GraphQL**: The server is powered by Node.js and Express.js, with data management handled through GraphQL queries and mutations.
 
-### `npm run build`
+6. **Database with MongoDB**: The application utilizes MongoDB as the database, and data interactions are facilitated using the Mongoose ODM.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7. **Authentication with JWT**: User authentication is implemented using JSON Web Tokens (JWT), ensuring secure access to user profiles and adoption functionality.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+8. **Deployment on Heroku**: The application is deployed on Heroku, allowing users to access it online.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Requirements
 
-### `npm run eject`
+To fulfill the project requirements, the Dog Adoption Web Application adheres to the following criteria:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Front-end: React
+- Back-end: GraphQL with Node.js and Express.js
+- Database: MongoDB with Mongoose ODM
+- Data Operations: Queries and mutations for data retrieval, addition, updating, and deletion
+- Deployment: Heroku deployment with live data
+- UI: Polished and responsive design
+- Interactivity: User input and response handling
+- Authentication: Implementation of JWT for user authentication
+- Server Security: Sensitive API key information protected on the server
+- Repository Quality: Well-structured codebase with quality coding standards
+- README: Detailed README with a unique name, description, technologies used, a screenshot, and a link to the deployed application.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To get started with the PAWFINDER Web Application, follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository: `git clone https://github.com/ddelgado25/Pawfinder-Project.git`
+2. Install dependencies: `npm install`
+3. Run necessary seeds: `npm run seed`
+4. Start the server: `npm run develop`
+5. Access the application in your browser at `http://localhost:3000`
 
-## Learn More
+## DEMO Preview
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Screenshot of preview pending](/path/to/screenshot.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Live Application
 
-### Code Splitting
+The PAWFINDER app is live and can be accessed [here](https://your-app-url.com).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributors
 
-### Analyzing the Bundle Size
+- [David Delgado](https://github.com/ddelgado25)
+- [George Doyle](https://github.com/GeorgeDoyle1175)
+- [Alisson Cevallos](https://github.com/alissonpceva)
+- [Mike Kehoe](https://github.com/mpk2996)
+- [Reggie Ulysse](https://github.com/rulysse11)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
