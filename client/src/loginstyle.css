@@ -69,8 +69,29 @@
     max-height: 100%;
     border: 2px solid black;
   }
+
+  .welcome-dog {
+    width: 50% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
-  .go-to-signup {
+  .signup-container {
+    width: 50% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #e6f1f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .go-to-signup,
+  .go-to-login {
     position: absolute;
     top: 10px;
     left: 10px;
