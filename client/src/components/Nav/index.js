@@ -54,7 +54,7 @@ function Nav() {
           <li className="mx-2">
             <Link
               to="/login"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover-rotate"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover-scale"
               style={{ backgroundColor: '#C8C8C8' }}
             >
               Login

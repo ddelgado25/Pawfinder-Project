@@ -211,7 +211,7 @@ input:focus {
   text-align: center;
 }
 .rounded {
-  border-radius: 0.75rem;
+  border-radius: 1rem;
 }
 
 .error-text {
