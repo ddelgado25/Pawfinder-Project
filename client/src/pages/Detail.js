@@ -112,7 +112,7 @@ function Detail() {
               <strong className="mr-2">Price:</strong>
               <span className="text-green-600">${currentProduct.price}</span>
               <button
-                className="ml-4 px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-700"
+                className="ml-4 px-4 py-2 rounded bg-custom-blue text-white hover:bg-blue-700"
                 onClick={addToCart}
               >
                 Add to Cart

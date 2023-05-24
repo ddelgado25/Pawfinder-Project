@@ -61,7 +61,7 @@ function ProductItem(item) {
         </div>
         <button
           onClick={addToCart}
-          className="block w-full mt-4 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 transition-colors duration-300 ease-in-out flex items-center justify-center"
+          className="block w-full mt-4 py-2 px-4 bg-custom-green text-white font-semibold rounded-lg shadow-md hover:bg-custom-blue focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 transition-colors duration-300 ease-in-out flex items-center justify-center"
         >
           <span className="mr-2">
             <BsCart4 size={20} />
