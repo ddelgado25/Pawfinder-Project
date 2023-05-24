@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import '../../index.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
 
 function CategoryMenu({ handleCategorySelect }) {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -27,17 +30,18 @@ function CategoryMenu({ handleCategorySelect }) {
   return (
     <div className="relative">
       <button
-        className="w-24 bg-blue-500 text-white px-4 py-2 rounded"
+        className="w-24.5 bg-custom-green text-white px-3 py-2 rounded flex items-center justify-between"
         onClick={handleAdoptButtonClick}
       >
-        ADOPT
+        Breeds
+        <FontAwesomeIcon icon={faChevronDown} />
       </button>
       {showDropdown && (
-        <div className="absolute mt-2 w-48 bg-white rounded-md shadow-lg dropdown-fade-in">
+        <div className="absolute mt-2 w-48 bg-transparent rounded-md shadow-lg dropdown-fade-in">
           {categories.map((category) => (
             <button
               key={category.name}
-              className="block w-full text-left p-2 hover:bg-gray-200"
+              className="block w-full text-left p-2 bg-white hover:bg-gray-200 transition-colors duration-300 transform hover:scale-105 mb-1 drop-shadow"
               onClick={() => handleCategorySelect(category.name)}
             >
               {category.name}
@@ -50,4 +54,3 @@ function CategoryMenu({ handleCategorySelect }) {
 }
 
 export default CategoryMenu;
-
