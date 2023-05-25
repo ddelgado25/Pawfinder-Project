@@ -50,7 +50,7 @@ To get started with the PAWFINDER Web Application, follow these steps:
 
 ## DEMO Preview
 
-![Screenshot of preview pending](/path/to/screenshot.png)
+![Demo of app](/client/src/images/Pawfinder-Demo.gif)
 
 ## Live Application
 
