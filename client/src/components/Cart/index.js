@@ -85,7 +85,7 @@ const Cart = () => {
       <div className="close" onClick={toggleCart}>
         [x]
       </div>
-      <h2 className="bg-blue-500 py-2 text-center text-white rounded-lg shadow-md">Shopping Cart</h2>
+      <h2 className="bg-custom-blue py-2 text-center text-white rounded-lg shadow-md">Shopping Cart</h2>
       {state.cart.length ? (
         <div>
           {state.cart.map((item) => (
@@ -99,7 +99,7 @@ const Cart = () => {
             {Auth.loggedIn() ? (
               <button onClick={submitCheckout}>Checkout</button>
             ) : (
-              <span>(log in to check out)</span>
+              <span> (log in to check out) </span>
             )}
           </div>
         </div>

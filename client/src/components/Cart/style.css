@@ -1,6 +1,6 @@
 .cart {
   position: fixed;
-  bottom: 5px;
+  top: 5px;
   right: 5px;
   min-width: 20%;
   max-width: 30%;
@@ -19,21 +19,21 @@
   margin: 1rem 0;
 }
 
-.cart .close {
+/* .cart .close {
   position: absolute;
   top: 0.25rem;
   right: .5rem;
   cursor: pointer;
   color: black;
-}
+} */
 
 .cart .close:hover {
   text-decoration: underline;
 }
 
 .cart-closed {
-  position: fixed;
-  bottom: 5px;
+  /* position: fixed; */
+  top: 5px;
   right: 5px;
   font-size: 2rem;
   cursor: pointer;
@@ -44,11 +44,11 @@
   height: 50px;
 }
 
-.cart-closed:hover {
+ .cart-closed:hover {
   transform: rotate(8deg);
-}
+ }
 
-.cart img {
+ .cart img {
   width: 70px;
   margin-right: 1rem;
 }
@@ -72,4 +72,4 @@
     position: fixed;
     margin: 0 auto;
   }
-}
+} 
