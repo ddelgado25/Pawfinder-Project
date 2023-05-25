@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
-import CategoryMenu from '../CategoryMenu';
+import Cart from "../Cart";
 
 function Nav() {
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -21,7 +21,6 @@ function Nav() {
               to=""
               className="text-gray-200 hover:text-gray-100 transition-colors duration-300"
             >
-              {/* <CategoryMenu handleCategorySelect={handleCategorySelect} /> */}
             </Link>
           </li>
           <li className="mx-1">
@@ -42,6 +41,11 @@ function Nav() {
     } else {
       return (
         <ul className="flex items-center">
+          <li className="mx-1">
+            <Link to="/aboutus">
+              About Us
+            </Link>
+          </li>
           <li className="mx-2">
             <Link
               to="/signup"
@@ -60,11 +64,7 @@ function Nav() {
               Login
             </Link>
           </li>
-          <li className="mx-1">
-            <Link to="/aboutus">
-              About Us
-            </Link>
-          </li>
+          <Cart />
         </ul>
       );
     }

@@ -30,7 +30,7 @@ function CategoryMenu({ handleCategorySelect }) {
   return (
     <div className="relative">
       <button
-        className="w-24.5 bg-custom-green text-white px-3 py-2 rounded flex items-center justify-between"
+        className="w-24.5 bg-custom-green text-white px-3 py-2 rounded flex items-center justify-between transition duration-300 ease-in-out hover:scale-105 transform"
         onClick={handleAdoptButtonClick}
       >
         Breeds

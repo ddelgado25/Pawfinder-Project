@@ -108,9 +108,9 @@ button {
   background-color: var(--secondary);
 }
 
-button:hover {
+/* button:hover {
   opacity: .8;
-}
+} */
 
 button[disabled] {
   cursor: default;
