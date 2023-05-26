@@ -54,7 +54,7 @@ To get started with the PAWFINDER Web Application, follow these steps:
 
 ## Live Application
 
-The PAWFINDER app is live and can be accessed [here](https://your-app-url.com).
+The PAWFINDER app is live and can be accessed [here](https://dashboard.heroku.com/apps/pawfinder).
 
 ## Contributors
 
