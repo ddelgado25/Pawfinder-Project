@@ -2,14 +2,9 @@ const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
-const cluster = require('cluster');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
-const WORKERS = process.env.WEB_CONCURRENCY || 1;
-for (let i = 0; i < WORKERS; i++) {
-  cluster.fork();
-}
 
 const PORT = process.env.PORT || 3001;
 const app = express();
