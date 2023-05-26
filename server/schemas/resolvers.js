@@ -2,7 +2,7 @@ const { AuthenticationError } = require('apollo-server-express');
 const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer');
 
 const resolvers = {
   Query: {
@@ -141,32 +141,32 @@ const resolvers = {
 
     sendMessage: async (parent, { name, email, message }, context) => {
       // Set up nodemailer transporter
-      let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: 'PawFinder2023@gmail.com',
-          pass: 'pawfinder2023'
-        }
-      });
+      // let transporter = nodemailer.createTransport({
+      //   service: 'gmail',
+      //   auth: {
+      //     user: 'PawFinder2023@gmail.com',
+      //     pass: 'pawfinder2023'
+      //   }
+      // });
 
       // Specify email options
-      let mailOptions = {
-        from: 'PawFinder2023@gmail.com',
-        to: 'PawFinder2023@gmail.com',
-        subject: `New message from ${name} at ${email}`,
-        text: message
-      };
+      // let mailOptions = {
+      //   from: 'PawFinder2023@gmail.com',
+      //   to: 'PawFinder2023@gmail.com',
+      //   subject: `New message from ${name} at ${email}`,
+      //   text: message
+      // };
 
       // Send the email
-      transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-          return error;
-        } else {
-          console.log('Email sent: ' + info.response);
-          return { name, email, message };
-        }
-      });
+      // transporter.sendMail(mailOptions, function(error, info){
+      //   if (error) {
+      //     console.log(error);
+      //     return error;
+      //   } else {
+      //     console.log('Email sent: ' + info.response);
+      //     return { name, email, message };
+      //   }
+      // });
     },
   },
 };
