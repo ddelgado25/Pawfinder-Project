@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
-  "main": "server/server.js",
   "dependencies": {
     "@apollo/client": "^3.5.8",
     "@stripe/stripe-js": "^1.3.1",
