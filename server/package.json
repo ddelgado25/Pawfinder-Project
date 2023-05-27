@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "node --optimize_for_size --max_old_space_size=920 --gc_interval=100 server.js",
     "watch": "nodemon",
