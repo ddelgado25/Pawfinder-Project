@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../index.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 
 function CategoryMenu({ handleCategorySelect }) {
@@ -34,7 +34,7 @@ function CategoryMenu({ handleCategorySelect }) {
         onClick={handleAdoptButtonClick}
       >
         Breeds
-        <FontAwesomeIcon icon={faChevronDown} />
+        {/* <FontAwesomeIcon icon={faChevronDown} /> */}
       </button>
       {showDropdown && (
         <div className="absolute mt-2 w-48 bg-transparent rounded-md shadow-lg dropdown-fade-in">
